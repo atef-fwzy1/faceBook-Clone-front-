@@ -1,0 +1,230 @@
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+ }
+
+ .header {
+    background: #41295a;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2F0743, #41295a);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     color: white;
+     padding: 10px 20px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .logo img {
+
+    height: 30px;
+        transform: rotate(180deg);
+ }
+
+ .search-bar {
+     display: flex;
+     align-items: center;
+     background-color: #f0f2f5;
+     border-radius: 20px;
+     padding: 5px;
+     margin-right: 20px;
+     position: relative;
+ }
+.search-bar .search-res{
+    position: absolute;
+        width: 100%;
+        height: fit-content;
+        top: 45px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+       border-radius: 6px;
+        gap: 10px;
+
+}
+.search-bar .search-res i.close{
+    color:#3b5998;
+    cursor: pointer;
+}
+
+.search-bar .search-res div.close{
+        display: flex;
+            align-items: center;
+            justify-content: end;
+            padding-right: 5px;
+}
+.search-bar .search-res .user{
+display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    gap: 2px;
+}
+.search-bar .search-res .user:hover{
+ background-color: rgb(239, 233, 233);
+}
+.search-bar .search-res .user div{
+    display: flex;
+        align-items: center;
+        justify-content: space-around;
+}
+.search-bar .search-res img{
+width: 30px;
+height: 30px;
+    border-radius: 50%;
+}
+.search-bar .search-res span{
+ color: #333;
+}
+ .search-bar input {
+     border: none;
+     outline: none;
+     background-color: transparent;
+     padding: 5px 10px;
+     color: #333;
+ }
+
+ .search-bar button {
+     border: none;
+     background-color: transparent;
+     color: #666;
+     cursor: pointer;
+     padding: 5px;
+ }
+
+ .icons {
+     display: flex;
+     align-items: center;
+ }
+
+ .icon-item {
+     margin-left: 15px;
+     cursor: pointer;
+     color: white;
+ }
+
+ .icon-item:hover {
+     color: #e7eaf4;
+ }
+
+ .profile-dropdown {
+     position: relative;
+ }
+
+ .profile-dropdown img {
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     cursor: pointer;
+ }
+
+ .dropdown-menu {
+     display: none;
+     position: absolute;
+     top: 30px;
+     right: 0;
+     background-color: white;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+     min-width: 150px;
+     text-align: start;
+ }
+
+ .dropdown-menu a {
+     display: block;
+     padding: 10px 15px;
+     color: #333;
+     text-decoration: none;
+ }
+
+ .dropdown-menu a:hover {
+     background-color: #f0f2f5;
+ }
+
+ .profile-dropdown:hover .dropdown-menu {
+     display: block;
+ }
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+        
+        .search-bar {
+         width: 30%;
+         margin-top: 10px;
+         margin-right: 0;
+     }
+     
+     .icons {
+         margin-top: 10px;
+     }
+    }
+    @media (max-width: 735px) {
+        .search-bar input{
+                width: 80%;
+        }
+    }
+@media(max-width:585px){
+    .icon-item span{
+        display: none;
+    }.icon-item i{
+       font-size: 21px;
+       margin-right: 15px;
+    }
+}
+@media(max-width:410px) {
+.icon-item i {
+        font-size: 18px;
+        margin-right: 7px;
+    }
+}@media(max-width:380px) {
+.header{
+        padding: 10px 5px;;
+    }
+}
+
+.login-container {
+    text-align: center;
+}
+
+/* زر تسجيل الدخول */
+.login-button {
+    background-color: #007bff;
+    /* لون أزرق */
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* تأثير عند المرور بالفأرة */
+.login-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* تأثير عند الضغط */
+.login-button:active {
+    transform: translateY(0);
+}
+
+/* عنوان تحت الزر (اختياري) */
+.login-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}

@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.dashCont{
+    background-color: rgb(39 49 66);
+        min-height: 100vh;
+        padding: 10px;
+    
+}
+
+.dashCont .profiel{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.stats-container {
+    display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+}
+.mange{
+    width: 100%;
+}
+@media(max-width:540px){
+    .stats-container{
+        flex-direction: column;
+    }
+}
+
+.stat-card {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card.blue {
+    background-color: #007bff;
+    color: white;
+}
+
+.stat-card.green {
+    background-color: #28a745;
+    color: white;
+}
+
+.stat-card.orange {
+    background-color: #fd7e14;
+    color: white;
+}
+
+.stat-card.red {
+    background-color: #dc3545;
+    color: white;
+    padding: 16px 10px;}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.arrow-up,
+.arrow-down {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+.mange{
+    padding: 16px 10px;
+}
+
+.card-body h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.increase,
+.decrease {
+    font-size: 12px;
+    color: #28a745;
+    /* Green for increase */
+}
+
+.decrease {
+    color: #dc3545;
+    /* Red for decrease */
+}
+
+/* Ongoing Projects Table */
+.table-container {
+    background-color: #2c3e50;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-header h2 {
+    margin: 0;
+    color: white;
+}
+
+.sort-arrow {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead th {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    text-align: center;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody td span {
+color: white;
+}
+
+tbody td.action div{
+    display: flex;
+        align-items: center;
+        justify-content: space-around;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #071523;
+}
+
+.overdue {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.status.in-progress {
+    background-color: #ffc107;
+    color: white;
+}
+
+.status.blocked {
+    background-color: #dc3545;
+    color: white;
+}
+
+.status.early-stages {
+    background-color: #007bff;
+    color: white;
+}
+
+table img {
+    width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: scale-down;
+        margin-right: 10px;
+}
+
+table button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+table select {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer; }

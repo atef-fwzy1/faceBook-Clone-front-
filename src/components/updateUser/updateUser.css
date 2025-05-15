@@ -1,0 +1,115 @@
+/* General Styles */
+.register-container {
+display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    position: fixed;
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(3px);
+        background-color: rgba(255, 255, 255, 0.2);
+}
+
+.register-form {
+background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+   
+}
+.register-form .closeUpdate{
+    position: absolute;
+        top: 10px;
+        right: 19px;
+        font-size: 20px;
+        cursor: pointer;
+}
+
+.register-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-form {
+        padding: 15px;
+    }
+
+    .form-group input {
+        font-size: 12px;
+    }
+
+    .btn-submit {
+        font-size: 14px;
+    }
+}
+
+.goThere {
+    font-size: 14px;
+    color: #007bffbd;
+    margin-right: 15px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.goThere:hover {
+
+    color: #007bffe3;
+}

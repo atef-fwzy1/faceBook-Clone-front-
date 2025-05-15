@@ -2,16 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import UpdatePops from "./website/context/updateProfile";
+import AddNewPost from './website/context/newPost';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ShowComm from './website/context/Comments';
+import UpdateUsers from './website/context/updateUser';
+import UpdatePost from './website/context/updatePost';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ShowComm>
+      <UpdateUsers>
+    <UpdatePops>
+      <AddNewPost>
+        <UpdatePost>
+
     <App />
+        </UpdatePost>
+      </AddNewPost>
+    </UpdatePops>
+      </UpdateUsers>
+    </ShowComm>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
