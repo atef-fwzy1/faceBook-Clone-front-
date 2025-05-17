@@ -12,6 +12,7 @@ export default  function Home (){
    var ShowComm = useContext(Comments)
    const [post,setPost] = useState([]);
    const IsUPdatePost = useContext(postUpdate)
+   //useeffect 
   useEffect(()=>{
     axios.get(`https://facebookclone-production.up.railway.app/api/posts?limit=20&page=`+page).then((res)=>{
     if(res.data.post.length === 0)
