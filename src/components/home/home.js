@@ -7,6 +7,8 @@ import PostWithComments from "../commentsBody/coments";
 import { Comments } from "../../website/context/Comments";
 import UpdatePost from "../updatePost/updatepost";
 import { Post as postUpdate  } from "../../website/context/updatePost";
+import Footer from "../footer/footer";
+import Loader from "../loader/Loader";
 export default  function Home (){
    const [page,setPage] = useState(1);
    var ShowComm = useContext(Comments)
@@ -30,11 +32,10 @@ export default  function Home (){
         
           
    return (
-   <div className="continer" style={{height:ShowComm.IsOpen.length > 0&&"100vh",overflow:"hidden"}}>
+   <div className="continer" style={{height:ShowComm.IsOpen.length > 0&&"100vh",minHeight: "100vh",position:"relative",overflow:"hidden"}}>
     <Header/>
       <div className="postsBox">
-         {allPosts.length > 0?allPosts:<h2 style={{textAlign:"center",margin:"10px 0px",color:"red"
-         }}h3>No Posts Yet </h2>}
+         {allPosts.length > 0?allPosts:<Loader/>}
       </div>
       <div className="pagination">
 <i onClick={()=>{
@@ -49,6 +50,7 @@ export default  function Home (){
       </div>
       {ShowComm.IsOpen.length > 0 && <PostWithComments/>}
       {IsUPdatePost.IsOpen.length > 0 &&<UpdatePost/>}
+      <Footer/>
    </div> 
     )
 }
