@@ -45,6 +45,7 @@ const RegisterForm = () => {
             Navigate("/login")
         })
       }).catch((err)=>{
+        console.log(err)
           swal("warning!", "Failed to join due to server error!", "warning");
       })
     };
