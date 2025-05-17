@@ -32,7 +32,7 @@ const LoginForm = () => {
     });
 
     const onSubmit = async (data) => {
-    await  axios.post("http://localhost:8080/api/auth/login",formData).then((res)=>{
+    await  axios.post("https://facebookclone-production.up.railway.app/api/auth/login",formData).then((res)=>{
         swal({
             title: "success !",
             text: "User are  registered successfly !",

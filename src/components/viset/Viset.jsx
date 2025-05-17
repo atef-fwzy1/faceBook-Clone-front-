@@ -16,7 +16,7 @@ const Viset = () => {
 
    const {id} = useParams("id")
     useEffect(()=>{
-     axios.get("http://localhost:8080/api/users/getuser/"+id)
+     axios.get("https://facebookclone-production.up.railway.app/api/users/getuser/"+id)
      .then((res)=>{
          setPosts(res.data.posts)
        setUser(res.data.data.User[0])

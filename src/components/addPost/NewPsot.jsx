@@ -26,7 +26,7 @@ const NewPost = (props) => {
         if(formData.image !== null)
         formdata.append("image",formData.image)
 
-    await  axios.post("http://localhost:8080/api/posts",formdata,{
+    await  axios.post("https://facebookclone-production.up.railway.app/api/posts",formdata,{
         headers:{
             Authorization:`bearer ${Cookies.get("userToken")}`
         }

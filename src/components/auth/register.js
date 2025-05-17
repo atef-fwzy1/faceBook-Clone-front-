@@ -40,7 +40,7 @@ const RegisterForm = () => {
     });
 
     const onSubmit = async (data) => {
-    await  axios.post("http://localhost:8080/api/auth/register",formData).then((res)=>{
+    await  axios.post("https://facebookclone-production.up.railway.app/api/auth/register",formData).then((res)=>{
         swal("Don ", "Joined successfully!", "success").then(()=>{
             Navigate("/login")
         })

@@ -27,7 +27,7 @@ const Profile = () => {
     const Token = Cookies.get("userToken")
 
     useEffect(()=>{
-     axios.get("http://localhost:8080/api/users/getuser",{
+     axios.get("https://facebookclone-production.up.railway.app/api/users/getuser",{
         headers:{
             Authorization :`${"bearer "+Token} `
         }
@@ -42,7 +42,7 @@ const Profile = () => {
     },[])
     
     function deleteuser(userId){
-      axios.delete("http://localhost:8080/api/users/getuser/"+userId,{
+      axios.delete("https://facebookclone-production.up.railway.app/api/users/getuser/"+userId,{
         headers:{
             Authorization :`${"bearer "+Token} `
         }
@@ -67,7 +67,7 @@ function changeImage(file){
 //! upload image with fromdata 
 const formData = new FormData();
     formData.append("image",file[0])
-        axios({ method: 'post',url:"http://localhost:8080/api/users/photo-uplaod",data:formData, headers:{
+        axios({ method: 'post',url:"https://facebookclone-production.up.railway.app/api/users/photo-uplaod",data:formData, headers:{
               Authorization :`${"bearer "+Token} `
         }}).catch((err)=>{
             console.log(err)

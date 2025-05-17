@@ -28,7 +28,7 @@ export default function UpdatePost(props){
             if(formData.description.length >= 2)
               form.append("description",formData.description)
             form.append("image",newImage[0])
-            axios({ method: 'put',url:"http://localhost:8080/api/posts/"+IsUPdatePost.IsOpen,data:form, headers:{
+            axios({ method: 'put',url:"https://facebookclone-production.up.railway.app/api/posts/"+IsUPdatePost.IsOpen,data:form, headers:{
                 Authorization :"bearer "+Token
           }}).then((res)=>{
             console.log(res)

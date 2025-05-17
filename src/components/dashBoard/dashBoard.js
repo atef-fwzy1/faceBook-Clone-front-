@@ -22,7 +22,7 @@ const Dashboard = () => {
  var ShowComm = useContext(Comments)
     useEffect(()=>{
       setLoader(true)
-        axios({ method: 'get',url:"http://localhost:8080/api/users/profile", headers:{
+        axios({ method: 'get',url:"https://facebookclone-production.up.railway.app/api/users/profile", headers:{
             Authorization :"bearer "+Token
             }}).then((res)=>{
                 SetAlllusers(res.data.data.ALlUsers)
@@ -37,7 +37,7 @@ const Dashboard = () => {
 
      useEffect(()=>{
       setLoader(true)
-        axios.get(`http://localhost:8080/api/posts`).then((res)=>{
+        axios.get(`https://facebookclone-production.up.railway.app/api/posts`).then((res)=>{
         if(res.data.post.length === 0)
           setPage(1)
           setPost(res.data.post)
@@ -50,7 +50,7 @@ const Dashboard = () => {
 
 function deleteuser(userId){
   setLoader(true)
-  axios.delete("http://localhost:8080/api/users/getuser/"+userId,{
+  axios.delete("https://facebookclone-production.up.railway.app/api/users/getuser/"+userId,{
     headers:{
         Authorization :`${"bearer "+Token} `
     }
@@ -67,7 +67,7 @@ function deleteuser(userId){
 }    
 function deletepot(postId){
   setLoader(true)
-   axios({ method: 'delete',url:`http://localhost:8080/api/posts/` + postId, headers:{
+   axios({ method: 'delete',url:`https://facebookclone-production.up.railway.app/api/posts/` + postId, headers:{
     Authorization :"bearer "+Token
     }}).then((res)=>{
       setLoader(false)

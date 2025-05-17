@@ -21,7 +21,7 @@ export default function Post(props){
       },[])
     function HndelLikes(postId){
 
-        axios({ method: 'put',url:"http://localhost:8080/api/posts/likes/"+postId, headers:{
+        axios({ method: 'put',url:"https://facebookclone-production.up.railway.app/api/posts/likes/"+postId, headers:{
             Authorization :`${"bearer "+Token} `
             }}).then((res)=>{
                 setPostLikes(res.data.Likes.likes)
@@ -33,7 +33,7 @@ export default function Post(props){
 
  function deletepost(postId){
     setShowList(false)
-    axios({ method: 'delete',url:"http://localhost:8080/api/posts/"+postId, headers:{
+    axios({ method: 'delete',url:"https://facebookclone-production.up.railway.app/api/posts/"+postId, headers:{
         Authorization :`${"bearer "+Token} `
         }}).then((res)=>{
           console.log(res)

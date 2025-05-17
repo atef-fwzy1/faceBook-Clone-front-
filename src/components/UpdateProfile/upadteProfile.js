@@ -32,7 +32,7 @@ const UpdateProfile = (props) => {
     });
 
     const onSubmit = async (data) => {
-    await  axios.put("http://localhost:8080/api/users/getuser/"+Cookies.get("userId"),formData,{
+    await  axios.put("https://facebookclone-production.up.railway.app/api/users/getuser/"+Cookies.get("userId"),formData,{
         headers:{
             Authorization:`bearer ${Cookies.get("userToken")}`
         }

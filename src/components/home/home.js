@@ -13,7 +13,7 @@ export default  function Home (){
    const [post,setPost] = useState([]);
    const IsUPdatePost = useContext(postUpdate)
   useEffect(()=>{
-    axios.get(`http://localhost:8080/api/posts?limit=20&page=`+page).then((res)=>{
+    axios.get(`https://facebookclone-production.up.railway.app/api/posts?limit=20&page=`+page).then((res)=>{
     if(res.data.post.length === 0)
       setPage(1)
       setPost(res.data.post)

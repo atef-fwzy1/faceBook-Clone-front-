@@ -22,7 +22,7 @@ const PostWithComments = () => {
     content:newComment
     }
 
-   axios.post("http://localhost:8080/api/comments",data, {headers:{
+   axios.post("https://facebookclone-production.up.railway.app/api/comments",data, {headers:{
               "Authorization" :`${"bearer "+Token} `
         }}).then((res)=>{
           console.log(res)
@@ -36,14 +36,14 @@ const PostWithComments = () => {
   
 
 useEffect(()=>{
-  axios.get("http://localhost:8080/api/comments/postComment/"+ShowComm.IsOpen[0]).then((res)=>{
+  axios.get("https://facebookclone-production.up.railway.app/api/comments/postComment/"+ShowComm.IsOpen[0]).then((res)=>{
 setComments(res.data.commentsPost)}).catch((err)=>{
   console.log(err)
 })
 },[render])
 
 function deleteComm(commId){
-   axios({ method: 'delete',url:"http://localhost:8080/api/comments/"+commId, headers:{
+   axios({ method: 'delete',url:"https://facebookclone-production.up.railway.app/api/comments/"+commId, headers:{
           Authorization :`${"bearer "+Token} `
           }}).then((res)=>{
             console.log(res)

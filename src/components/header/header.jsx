@@ -14,7 +14,7 @@ export default  function Header (){
     let [isOPen,setisOPen] = useState(false)
     const Token = Cookies.get("userToken")
     useEffect(()=>{
-               axios.get("http://localhost:8080/api/users/search?name="+search,{headers:{
+               axios.get("https://facebookclone-production.up.railway.app/api/users/search?name="+search,{headers:{
                 Authorization:"bearer " + Token
                }}
                ).then((ele)=>{
@@ -31,7 +31,7 @@ export default  function Header (){
     },[search.length])
 
     useEffect(()=>{
-axios.get("http://localhost:8080/api/users/getuser",{headers:{
+axios.get("https://facebookclone-production.up.railway.app/api/users/getuser",{headers:{
                 Authorization:"bearer " + Token
                }}
                ).then((res)=>{
